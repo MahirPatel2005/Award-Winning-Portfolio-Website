@@ -1,0 +1,80 @@
+@media screen and (max-width : 1440px) {
+
+    .toggle-menu{
+        display: none;
+    }
+    .herobox_image{
+        width: 40%;
+    }
+    .herobox_image img{
+        transform: scale(0.9);
+    }
+
+    .herobox .passion_2 a{
+        font-size: 160px;
+    }
+    .herobox .passion_2_outline a{
+        font-size: 160px;
+    }
+    .herobox p{
+        font-size: 18px;
+        left: 15%;
+        bottom: 20%;
+    }
+    .herobox a.designer_btn{
+        left: 35%;
+    }
+}
+
+@media screen and (max-width : 1024px) {
+
+    nav a.contact_btn{
+        width: 140px;
+        font-size: 15px;
+        height: 45px;
+    }
+    .nav_logo{
+        width: 15%;
+    }
+    .herobox .intro{
+        font-size: 25px;
+    }
+    .herobox .passion_1 a{
+        font-size: 150px;
+    }
+    .herobox .passion_1_outline a{
+        font-size: 150px;
+    }
+    .herobox .passion_2{
+        width: 80%;
+    }
+    .herobox .passion_2 a{
+        font-size: 140px;  
+    }
+    .herobox .passion_2_outline a{
+        font-size: 140px; 
+    }
+    .herobox_image{
+        width: 40%;
+    }
+    .herobox_image img{
+        transform: scale(1);
+    }
+    .herobox p{
+        font-size: 18px;
+        left: 7%;
+        bottom: 20%;
+    }
+    .herobox a.designer_btn{
+        width: 160px;
+        font-size: 15px;
+        left: 33%;
+    }
+    .herobox a.photographer_btn{
+        width: 180px;
+        font-size: 15px;
+    }
+}
+
+
+
