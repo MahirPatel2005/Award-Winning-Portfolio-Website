@@ -166,8 +166,8 @@ slider();
 function toolkit() {
   var github = document.querySelectorAll(".overlay i.fa-github");
   var toolGithub = document.querySelectorAll(".tool-github");
-  var liveDemo = document.querySelectorAll(".overlay i.fa-solid");
-  var toolLiveDemo = document.querySelectorAll(".tool-livedemo");
+  // var liveDemo = document.querySelectorAll(".overlay i.fa-solid");
+  // var toolLiveDemo = document.querySelectorAll(".tool-livedemo");
 
   github.forEach((git) =>
     git.addEventListener("mouseenter", function () {
@@ -181,17 +181,17 @@ function toolkit() {
     })
   );
 
-  liveDemo.forEach((liveIcon) =>
-    liveIcon.addEventListener("mouseenter", function () {
-      toolLiveDemo.forEach((toolDemo) => (toolDemo.style.opacity = "100%"));
-    })
-  );
+  // liveDemo.forEach((liveIcon) =>
+  //   liveIcon.addEventListener("mouseenter", function () {
+  //     toolLiveDemo.forEach((toolDemo) => (toolDemo.style.opacity = "100%"));
+  //   })
+  // );
 
-  liveDemo.forEach((liveIcon) =>
-    liveIcon.addEventListener("mouseleave", function () {
-      toolLiveDemo.forEach((toolDemo) => (toolDemo.style.opacity = "0%"));
-    })
-  );
+  // liveDemo.forEach((liveIcon) =>
+  //   liveIcon.addEventListener("mouseleave", function () {
+  //     toolLiveDemo.forEach((toolDemo) => (toolDemo.style.opacity = "0%"));
+  //   })
+  // );
 }
 
 toolkit()
@@ -200,7 +200,7 @@ toolkit()
 function section3(){
 
   gsap.to(".show-me",{
-    x : "5%",
+    x : "-20%",
     scrollTrigger : {
       trigger : ".show-me",
       scrub : .5
@@ -208,7 +208,7 @@ function section3(){
   })
 
   gsap.to(".passions",{
-    x : "-5%",
+    x : "-40%",
     scrollTrigger : {
       trigger : ".passions",
       scrub : .5
@@ -218,65 +218,26 @@ function section3(){
 }
 section3()
 
-
-function section4(){
-  gsap.to(".top-logo1",{
-    x : "50%",
-    scrollTrigger : {
-      trigger : ".top-logo1",
-      scrub : .5
-    }
-  })
-  gsap.to(".top-logo2",{
-    x : "-80%",
-    scrollTrigger : {
-      trigger : ".top-logo2",
-      scrub : .5
-    }
-  })
-  gsap.to(".bottom-logo1",{
-    x : "30%",
-    scrollTrigger : {
-      trigger : ".bottom-logo1",
-      scrub : .5
-    }
-  })
-  gsap.to(".bottom-logo2",{
-    x : "-40%",
-    scrollTrigger : {
-      trigger : ".bottom-logo2",
-      scrub : .5
-    }
-  })
+function section4() {
+  // Animate sections when they scroll into view
+  gsap.utils.toArray('.skills h2, .skills p').forEach((element) => {
+    gsap.from(element, {
+      opacity: 0,  // Start invisible
+      y: 50,  // Start below the element's position
+      duration: 0.5,  // Duration of the animation
+      ease: "power3.out",  // Ease out effect for a smooth feel
+      scrollTrigger: {
+        trigger: element,  // Trigger animation when the element comes into view
+        start: "top 100%",  // Start animation when the top of the element reaches 80% of the viewport height
+        end: "bottom 0%",  // End the animation when the element reaches 20% of the viewport height
+        scrub: 0.5,  // Allow the animation to follow the scroll with a slight delay
+        once: true,  // Animation happens only once when the element comes into view
+      }
+    });
+  });
 }
+
 section4()
-
-function section6(){
-  gsap.to(".col-1-section-6",{
-    y : "-66.5%",
-    scrollTrigger : {
-      trigger : ".col-1-section-6",
-      scrub : .2
-    }
-  })
-}
-section6()
-
-
-function section7(){
-gsap.to(".col-section-7",{
-  y : "-30%",
-  stagger : .1,
-  duration : .5,
-  scrollTrigger : {
-    trigger : ".col-section-7",
-    scrub : .2
-  }
-
-})
-}
-section7()
-
 
 function loader(){
   gsap.to(".loader",{
